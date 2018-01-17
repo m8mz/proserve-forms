@@ -53,16 +53,16 @@ if ($_POST["submit"]){
 								 $mail = new PHPMailer\PHPMailer\PHPMailer;
 								 $mail->isSMTP();
 								 $mail->SMTPDebug = 0; // set 2 for debug
-								 $mail->Host = 'smtp.accountsupport.com';
+								 $mail->Host = 'HOSTNAME';
 								 $mail->Port = 587;
 								 $mail->SMTPSecure = 'tls';
 								 $mail->SMTPAuth = true;
-								 $mail->Username = 'noreply@hcrepro.com';
-								 $mail->Password = 'irUuZqQ1rMe2';
-						 	   $mail->setFrom('noreply@hcrepro.com', 'HCREPRO');
-								 $mail->addReplyTo('noreply@hcrepro.com', 'HCREPRO');
-						 	   $mail->addAddress('techhelp3636@gmail.com', 'Admin');
-						 	   $mail->Subject = 'Form Submission';
+								 $mail->Username = 'NOREPLY@DOMAIN.COM';
+								 $mail->Password = 'PASS';
+						 	   	 $mail->setFrom('NOREPLY@DOMAIN.COM', 'HCREPRO');
+								 $mail->addReplyTo('NOREPLY@DOMAIN.COM', 'HCREPRO');
+						 	   	 $mail->addAddress('TO@CUSTOMER.COM', 'Admin');
+						 	   	 $mail->Subject = 'Form Submission';
 						 		 $bodyMessage = "Name: {$name}<br>";
 						 		 $bodyMessage .= "Job: {$job}<br>";
 						 		 $bodyMessage .= "Email: {$email}<br>";
